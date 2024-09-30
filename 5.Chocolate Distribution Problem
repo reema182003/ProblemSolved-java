@@ -1,0 +1,22 @@
+import java.util.Arrays;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		int m=3;
+		int a[]= {7,3,2,4,9,12,56};
+		Arrays.sort(a);
+		int mindiff=Integer.MAX_VALUE;
+		for(int i=0;i<(a.length-m+1);i++) {
+			int min=a[i];
+			int max=a[i+m-1];
+			mindiff=Math.min(mindiff,(max-min));
+			
+		}
+		System.out.println("Minimum differnce :"+mindiff);
+	}
+}
+
+
+//Output:
+Minimum differnce :2
